@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fase Ejecución</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Estilos personalizados */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .column {
+      width: 50%;
+      padding: 20px;
+    }
+
+header {
+  color: #55aa55; /* letra azul oscuro */
+  padding: 20px;
+}
+
+h1 {
+  color: #ffffff;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #999999;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #55aa55; /* letra azul oscuro */
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  color: #55aa55; /* letra azul oscuro */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+footer {
+  color: #55aa55; /* letra azul oscuro */
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+        video {
+            width: 30%;
+            height: 400px;
+            align-content: center;
+        }
+        .columnas {
+  display: flex;
+}
+
+.columna {
+  flex-basis: 50%;
+}
+.contenedor-videos {
+  display: flex;
+  width: 70%;
+  height: 600px;
+}
+
+.contenedor-videos video {
+  flex-basis: 50%;
+}
+.centered {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+.centered-embed  {
+  align-content: center;
+}
+.evidencias {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 20px;
+}
+
+.evidence-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-item video {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 10px;
+}
+
+.video-item p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.planos {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 20px;
+}
+
+.planos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.planos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.planos-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.planos-item img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.planos-item video {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.planos-item p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.simulacion-logica {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 20px;
+}
+
+.simulacion-logica-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.simulacion-logica-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.simulacion-logica-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.simulacion-logica-item video {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.simulacion-logica-item p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.avance-tecnologico-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avance-tecnologico-item {
+  flex-basis: 60%;
+  margin: 20px;
+}
+
+.avance-tecnologico-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.avance-tecnologico-item p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left-column {
+  width: 45%;
+  margin-right: 30px;
+}
+
+.right-column {
+  width: 45%;
+  margin-left: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.viñeta {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #666;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.pdf-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.pdf-left, .pdf-right {
+  width: 45%;
+  margin: 10px;
+}
+
+.pdf-left h2, .pdf-right h2 {
+  margin: 0;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+}
+
+.pdf-left embed, .pdf-right embed {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+.conclusiones-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.conclusion-group {
+  margin-bottom: 20px;
+}
+
+.conclusion-group h3 {
+  font-size: 20px;
+  color: #55aa55; /* letra azul oscuro */
+  margin-top: 0;
+}
+
+.conclusion-group p {
+  font-size: 24px;
+  color: #000;
+  margin-top: 30px;
+}
+body {
+  background-image: linear-gradient(to bottom, #F5F5DC, #F0F0F0, #FFFFFF);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('img/5586300.jpg');
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body * {
+  background: none;
+  background-image: none;
+  background-color: transparent;
+}
+
+ </style>
+    <center>
+        <img src="img/Logo.png" height="97"/>
+    </center>
+</head>
+<body>
+  <center>
+    <h1 style=" color: #55aa55; ">Fase Ejecución</h1>
+</center>
+  <section  class="avance-tecnologico">
+    <div class="avance-tecnologico-container">
+      <div class="avance-tecnologico-grid">
+        <div class="avance-tecnologico-item">
+          <h3 style="color:  #55aa55;">Avance Tecnico -  Español</h3>
+          <p style="color: #000; font-size: 24px;">En esta fase del proyecto se evidencia
+            como se destaca la presencia de un banco de pruebas de 100 cm x 100 cm. Este banco cuenta con
+             la instalación de tres puntos de red, tres puntos eléctricos normales y tres puntos eléctricos
+              regulados. Además, se proporciona una simulación lógica de la red que muestra cómo funciona y
+               cómo está configurada la red inalámbrica, de acuerdo con los parámetros solicitados. Como
+                prueba visual, se incluyen videos de la implementación, planos en 3D y facturas de compra.
+                 También se implementa el software SpiceWorks para la gestión del banco de pruebas y su
+                  creación.</p>
+                  <div style="width: 300px; height: 100px;;"><img src="img/avance tecnico.jpeg" alt=""; width="800 "; height="500"></div>
+                   
+            
+            
+                <source src="audio/español analisis dos.ogg">
+            </audio>
+        </div>
+        <div class="avance-tecnologico-item">
+          <h3 style="color:  #55aa55;">Avance Tecnico - Inglés</h3>
+          <p style="color: #000; font-size: 24px;">In this phase of the project,
+            the presence of an 100 cm x 100 cm test bench is evident. This bank has the installation 
+            of three network points, three normal electrical points and three regulated electrical points.
+             Additionally, a logical network simulation is provided that shows how the wireless network 
+             works and is configured, according to the requested parameters. As visual proof, implementation
+              videos, 3D plans and purchase invoices are included. SpiceWorks software is also implemented
+                for the management of the test bench and its creation..</p>
+                <div style="width: 300px; height: 100px;"><img src="img/firma.jpg" alt=""; width="300 "; height="100"></div>
+                <audio controls>
+                  <source src="audio/ejecucioninglesestefania.opus">
+          </audio>
+          <audio controls>
+              <source src="audio/inglesanalisis2.ogg">
+          </audio>
+        </div>
+      </div>
+    </div>
+  </section>
+    <main>
+        <div class="main">
+
+    </main>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1 style="color:#55aa55" >Documentación Técnica </h1>
+<center>
+  <section class="planos">
+    <h2>Planos y Recorrido 3D</h2>
+    <div class="planos-container">
+      <div class="planos-grid">
+        <div class="planos-item">
+          <img src="img/plano arquitectonico.png" alt="Plano Arquitectonico 2D" width="100%" height="500px">
+          <p>Plano Arquitectonico 2D</p>
+        </div>
+        <div class="planos-item">
+          <img src="img/Plano Electrico.png" alt="Plano Electrico" width="100%" height="500px">
+          <p>Plano Electrico</p>
+        </div>
+        <div class="planos-item">
+          <img src="img/Plano Datos.png" alt="Plano de Datos" width="100%" height="500px">
+          <p>Plano de Datos</p>
+        </div>
+        <div class="planos-item">
+          <img src="img/mapa de calor.jpeg" alt="Plano Mapa de calor" width="100%" height="500px">
+          <p>Plano Mapa de calor</p>
+        </div>
+        <div class="planos-item">
+          <video width="100%" height="500px" controls>
+            <source src="videos/3d.mp4" type="video/mp4">
+          </video>
+          <p>Recorrido 3D</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <h1 style="color:#55aa55" >Evidencias multimediales </h1>
+                <section class="evidencias">
+                  <h2>Banco de pruebas</h2>
+                  <div class="evidence-container">
+                    <div class="video-grid">
+                      <div class="video-item">
+                        <video width="100" height="50" controls>
+                          <source src="videos/06_3_IMPLEMENTACIÓN_CANALETA (1).mp4" type="video/mp4">
+                        </video>
+                        <p>Implementación canaleta</p>
+                      </div>
+                      <div class="video-item">
+                        <video width="100" height="50" controls>
+                          <source src="videos/06_3_IMPLEMENTACION_TOMACORRIENTE (1).mp4" type="video/mp4">
+                        </video>
+                        <p>Implementación Tomacorriente</p>
+                      </div>
+                      <div class="video-item">
+                        <video width="100" height="50" controls>
+                          <source src="videos/06_3_IMPLEMENTACIÓN_CONMUTABLE.mp4" type="video/mp4">
+                        </video>
+                        <p>Implementación conmutable</p>
+                      </div>
+                      <div class="video-item">
+                        <video width="100" height="50" controls>
+                          <source src="videos/06_3_TOMA_DE_RED (1).mp4" type="video/mp4">
+                        </video>
+                        <p>Toma de red</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                          <section class="simulacion-logica"></section>
+                          <h2>Simulación logica de la red</h2>
+                          <video width="400" height="300" controls>
+                            <source src="videos/Simulación lógica de la red.mp4" type="video/mp4">
+                          </video>
+                          <section class="simulacion-logica"></section>
+                          <h2>Configuración router 
+                            inalámbrico.</h2>
+                          <video width="400" height="300" controls>
+                            <source src="videos/T-PLINK.mp4" type="video/mp4">
+                          </video>
+                    </div>
+                <section class="simulacion-logica">
+                  <h2>Implementación de la
+                    aplicación para la gestión
+                    de tickets</h2>
+                  <div class="simulacion-logica-container">
+                    <div class="simulacion-logica-grid">
+                      <div class="simulacion-logica-item">
+                        <video width="100%" height="300px" controls>
+                          <source src="videos/SpiceWorks 1.mp4" type="video/mp4">
+                        </video>
+                        <p>Uso de spiceworks</p>
+                      </div>
+                      <div class="simulacion-logica-item">
+                        <video width="100%" height="300px" controls>
+                          <source src="videos/Configuracion de spiceworks.mp4" type="video/mp4">
+                        </video>
+                        <p>Configuracion de SpiceWorks</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <h2>Recomendaciones para el cliente</H2>
+                <div class="container">
+                  <div class="left-column">
+                    <h2>Instalaciones Eléctricas</h2>
+                    <ul>
+                      <li style="font-size: 24px;"><span class="viñeta"></span> No retirar las marquillas de las tomacorrientes reguladas y normales.</li>
+                      <li style="font-size: 24px;"><span class="viñeta"></span> No sobrecargues los enchufes: No conectes demasiados aparatos a un mismo enchufe.</li>
+                      <li style="font-size: 24px;"><span class="viñeta"></span> No tires del cable para desenchufar un aparato: Tira siempre del enchufe, no del cable.</li>
+                      <li style="font-size: 24px;"><span class="viñeta"></span> No uses aparatos eléctricos con las manos mojadas: El agua y la electricidad son una combinación peligrosa.</li>
+                      <li style="font-size: 24px;"><span class="viñeta"></span> Desconecta los aparatos electrónicos que no uses con frecuencia: Algunos aparatos electrónicos, como televisores y ordenadores, siguen consumiendo energía en modo de espera.</li>
+                    </ul>
+                  </div>
+                  <div class="right-column">
+                    <h2>Instalaciones de Datos</h2>
+                    <ul>
+                      <li style="font-size: 24px;"><span class="viñeta"></span> Comprime los datos: Muchos navegadores y aplicaciones ofrecen opciones para comprimir los datos, lo que reduce la cantidad de datos que se descargan.</li>
+                      <li style="font-size: 24px;"><span class="viñeta"></span> Mantén tu software actualizado: El software desactualizado puede contener vulnerabilidades que los piratas informáticos pueden aprovechar para acceder a tu dispositivo.</li>
+                      <li style="font-size: 24px;"><span class="viñeta"></span> No retirar las marquillas de las tomas de datos</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="pdf-container">
+                  <div class="pdf-left">
+                    <h2>Factura de compras</h2>
+                    <embed src="doc/Pdf/«Ferreteria Factura» 2.pdf" type="application/pdf" width="400px" height="600px">
+                  </div>
+                  <div class="pdf-right">
+                    <h2>Bitacora de visitas</h2>
+                    <embed src="doc/Pdf/bitacora de visita.pdf"application/pdf" width="400px" height="600px">
+                  </div>
+                </div>
+                                 <div class="evidence-container">         
+                <h1 style="color: #55aa55;">Conclusiones</h1>
+                <div class="conclusiones-container">
+                  <div class="conclusion-group">
+                    <h3>Capacidad de Instalación: </h3>
+                    <p>El banco de pruebas cuenta con la instalación de tres puntos de red, tres puntos eléctricos normales y tres puntos
+                       eléctricos regulados, lo que demuestra una capacidad significativa para soportar múltiples dispositivos y configuraciones 
+                    </p>
+                  </div>
+                  <div class="conclusion-group">
+                    <h3>Simulación Lógica de la Red: </h3>
+                    <p>Se proporciona una simulación lógica de la red que muestra su funcionamiento y configuración inalámbrica de acuerdo
+                       con los parámetros solicitados, lo que garantiza una representación visual y funcional del entorno de pruebas</p>
+                  </div>
+                  <div class="conclusion-group">
+                    <h3>Pruebas Visuales y Documentación: </h3>
+                    <p>La implementación se respalda con videos, planos en 3D y facturas de compra, lo que proporciona una documentación
+                      visual y detallada del proceso de implementación del banco de pruebas 
+                    </p>
+                  </div>
+                  <div class="conclusion-group">
+                    <h3>Gestión del Banco de Pruebas:</h3>
+                    <p> Se implementa el software SpiceWorks para la gestión del banco de pruebas y su creación, lo que indica un enfoque
+                       integral para la administración y supervisión del entorno de pruebas</p>
+                  </div>
+                </div>
+              </div>                 
+      
+</body>
+</body>
+</html>
